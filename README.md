@@ -13,6 +13,7 @@ the usage in for this provider are the nexts steps:
 for milliseconds is  ms
 
 i.e:
+
     resource "timeconvert_nanoseconds" "main" {
         time = "1h"
     }
