@@ -22,4 +22,24 @@ i.e:
     value = timeconvert_nanoseconds.main.ns
     }
 
-the example above, try to get the amount of nanoseconds that exists in 1 hour
+the example showed , try to get the amount of nanoseconds that exists in 1 hour , but you can get in the same way the milliseconds or seconds using
+
+i.e:
+    resource "timeconvert_milliseconds" "main" {
+        time = "1h"
+    }
+
+    output "seconds" {
+        value = timeconvert_milliseconds.main.ms
+    }
+
+or using this provider to get the seconds per x amount of hours
+
+i.e:
+    resource "timeconvert_seconds" "main" {
+        time = "1h"
+    }
+
+    output "seconds" {
+        value = timeconvert_seconds.main.secs
+    }
